@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main () {
+	int arr1[]={1,2,3,4,5};
+	int arr2[]={6,7,8,9,10};
+	int n1=sizeof(arr1)/sizeof(arr1[0]);
+	int n2=sizeof(arr2)/sizeof(arr2[0]);
+	int mergedsize=n1+n2;
+	int mergedarr[mergedsize];
+	for(int i=0;i<n1;i++) {
+		mergedarr[i]=arr1[i];
+	}
+	for(int i=0;i<n2;i++) {
+		mergedarr[n1+i]=arr2[i];
+	}
+	printf("Merged array:\n");
+	for(int i=0;i<mergedsize;i++) {
+		printf("%d ",mergedarr[i]);
+	}
+	printf("\n");
+	return 0;
+}
